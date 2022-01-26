@@ -44,7 +44,8 @@
         android:layout_height="120dp"
         android:layout_centerInParent="true"
         android:tag="stopped"
-        android:text="START"
+        android:text="啟動"
+        <!-- android:text="START"-->
         />
 
 
