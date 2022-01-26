@@ -45,7 +45,6 @@
         android:layout_centerInParent="true"
         android:tag="stopped"
         android:text="啟動"
-        <!-- android:text="START"-->
         />
 
 
