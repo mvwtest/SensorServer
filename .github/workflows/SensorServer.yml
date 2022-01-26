@@ -23,5 +23,5 @@ jobs:
         with:
           name: NYTimes APK
           path: app/build/outputs/apk/debug/app-debug.apk
-          tag: ${{ github.ref }}
-          overwrite: true
+          #tag: ${{ github.ref }}
+          #overwrite: true
