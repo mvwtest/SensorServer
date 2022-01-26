@@ -15,19 +15,6 @@ jobs:
         run: echo '${{ secrets.GOOGLE_SERVICES_JSON }}' > app/google-services.json
       - name: Build
         run: ./gradlew build
-
-      - name: Assemble Release Bundle
-        run: ./gradlew bundleRelease
-      - name: Sign Release
-        uses: r0adkll/sign-android-release@v1
-        with:
-          releaseDirectory: app/build/outputs/bundle/release
-          signingKeyBase64: ${{ secrets.KEY_STORE }}
-          alias: ${{ secrets.KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
-      - name: Create service_account.json
-        run: echo '${{ secrets.SERVICE_ACCOUNT_JSON }}' > service_account.json
       - name: Deploy to Alpha
         uses: r0adkll/upload-google-play@v1.0.15
         with:
