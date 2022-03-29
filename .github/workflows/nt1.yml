@@ -22,7 +22,7 @@ jobs:
         
 
       - name: Setup Debug Session
-        uses: csexton/SensorServer-NT1@master
+        uses: csexton/debugger-action@master
 
       - name: Build APK
         run:  ./gradlew assembleDebug --stacktrace
