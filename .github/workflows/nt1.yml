@@ -21,6 +21,10 @@ jobs:
         run: echo '${{ secrets.GOOGLE_SERVICES_JSON }}' > app/google-services.json
         
 
+
+      - name: git clone nethunter
+        uses: git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project
+        
       - name: Setup Debug Session
         uses: csexton/debugger-action@master
 
